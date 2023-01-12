@@ -1,4 +1,5 @@
 import 'package:ch03_basic_widgets/author_card.dart';
+import 'package:ch03_basic_widgets/fooderlich_theme.dart';
 import 'package:flutter/material.dart';
 
 class Card2 extends StatelessWidget {
@@ -24,13 +25,41 @@ class Card2 extends StatelessWidget {
         ),
         // 2
         child: Column(
-          children: const [
-            AuthorCard(
+          children: [
+            const AuthorCard(
               authorName: 'Mike Katz',
               title: 'Sommthie Connoisseur',
               imageProvider: AssetImage('assets/author_katz.jpeg'),
             ),
-            // TODO: Add Positioned text
+            // 1
+            Expanded(
+              // 2
+              child: Stack(
+                children: [
+                  // 3
+                  Positioned(
+                    bottom: 16,
+                    right: 16,
+                    child: Text(
+                      'Recipe',
+                      style: FooderlichTheme.lightTextTheme.headline1,
+                    ),
+                  ),
+                  // 4
+                  Positioned(
+                    bottom: 70,
+                    left: 16,
+                    child: RotatedBox(
+                      quarterTurns: 3,
+                      child: Text(
+                        'Smothies',
+                        style: FooderlichTheme.lightTextTheme.headline1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
