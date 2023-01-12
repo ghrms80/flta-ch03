@@ -1,5 +1,6 @@
 import 'package:ch03_basic_widgets/card1.dart';
 import 'package:ch03_basic_widgets/card2.dart';
+import 'package:ch03_basic_widgets/card3.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -17,8 +18,7 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const Card1(),
     const Card2(),
-    // TODO: Replace with Card3
-    Container(color: Colors.blue),
+    const Card3(),
   ];
   // 9
   void _onItemTapped(int index) {
