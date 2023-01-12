@@ -24,7 +24,7 @@ class Card2 extends StatelessWidget {
         // 2
         child: Column(
           children: const [
-            // TODO: Add author imformation
+            // TODO: Add author information
             // TODO: Add Positioned text
           ],
         ),
