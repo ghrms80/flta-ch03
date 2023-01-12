@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:ch03_basic_widgets/fooderlich_theme.dart';
 import 'package:flutter/material.dart';
 
 class Card3 extends StatelessWidget {
@@ -32,8 +35,77 @@ class Card3 extends StatelessWidget {
                 ),
               ),
             ),
-            // TODO: Add Container, Column, Icon and Text
-            // TODO: Add Center widget with Chip widget children
+            Container(
+              // 3
+              padding: const EdgeInsets.all(16),
+              // 4
+              child: Column(
+                // 5
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 6
+                  const Icon(
+                    Icons.book,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  // 7
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  // 8
+                  Text(
+                    'Recipe Trends',
+                    style: FooderlichTheme.darkTextTheme.headline2,
+                  ),
+                  // 9
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+            ),
+            Center(
+              // 11
+              child: Wrap(
+                // 12
+                alignment: WrapAlignment.start,
+                // 13
+                spacing: 12,
+                // 14
+                runSpacing: 12,
+                // 15
+                children: [
+                  Chip(
+                    label: Text(
+                      'Healthy',
+                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                    ),
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                    onDeleted: (() {
+                      log('delete');
+                    }),
+                  ),
+                  Chip(
+                    label: Text(
+                      'Vegan',
+                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                    ),
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                    onDeleted: (() {
+                      log('delete');
+                    }),
+                  ),
+                  Chip(
+                    label: Text(
+                      'Carrots',
+                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                    ),
+                    backgroundColor: Colors.black.withOpacity(0.7),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
