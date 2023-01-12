@@ -1,3 +1,4 @@
+import 'package:ch03_basic_widgets/card1.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -13,8 +14,7 @@ class _HomeState extends State<Home> {
 
   // 8
   static List<Widget> pages = <Widget>[
-    // TODO: Replace with Card1
-    Container(color: Colors.red),
+    const Card1(),
     // TODO: Replace with Card2
     Container(color: Colors.green),
     // TODO: Replace with Card3
@@ -36,6 +36,7 @@ class _HomeState extends State<Home> {
           // 2
           style: Theme.of(context).textTheme.headline6,
         ),
+        centerTitle: true,
       ),
       // TODO: Show selected tab
       body: pages[_selectedIndex],
